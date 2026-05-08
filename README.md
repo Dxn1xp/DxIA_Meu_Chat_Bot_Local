@@ -21,3 +21,52 @@ Timer, Controle de Volume, Controle de Brilho, Listar Processos, Status da IA, M
 
 Qualquer coisa a ser perguntada sem citar um comando > IA vai responder no chat.
 
+
+Requisitos:
+Python 3.13+ (Eu uso 3.14)
+Node.js
+Ollama instalado
+
+Modelo: llama3.2 3b. 
+
+
+Dependências:
+
+
+### Backend
+- Python
+- Flask
+- Ollama
+- OpenCV
+- MediaPipe
+
+### Frontend
+- React
+- Vite
+
+---
+
+# Instalação
+
+## Backend
+
+cd backend
+
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python api.py
+ 
+---
+
+## Frontend
+
+cd frontend
+
+npm install
+npm run dev
+
