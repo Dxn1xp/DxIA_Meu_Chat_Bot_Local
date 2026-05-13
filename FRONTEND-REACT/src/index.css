@@ -1,0 +1,87 @@
+/* ═══════════════════════════════════════════════
+   DX_IA · Global CSS
+   Fontes: Orbitron (display) + Sora (corpo)
+   ═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&family=Sora:wght@300;400;500;600&display=swap');
+
+/* ── Variáveis ──────────────────────────────── */
+:root {
+  /* Fundo */
+  --bg-0:   #030407;   /* void */
+  --bg-1:   #07090f;   /* surface */
+  --bg-2:   #0c0f1a;   /* raised */
+  --bg-3:   #131825;   /* elevated */
+  --glass:  rgba(12, 15, 26, 0.78);
+
+  /* Ciano elétrico */
+  --c:       #00e5ff;
+  --c-dim:   rgba(0, 229, 255, 0.10);
+  --c-glow:  rgba(0, 229, 255, 0.32);
+  --c-deep:  #00bcd4;
+
+  /* Violeta */
+  --v:       #7c4dff;
+  --v-dim:   rgba(124, 77, 255, 0.16);
+  --v-glow:  rgba(124, 77, 255, 0.36);
+
+  /* Semântico */
+  --green:   #00e676;
+  --red:     #ff5252;
+  --amber:   #ffab40;
+
+  /* Texto */
+  --t1: #e8eaf6;
+  --t2: #8892b0;
+  --t3: #3a4060;
+
+  /* Bordas */
+  --b1: rgba(0, 229, 255, 0.07);
+  --b2: rgba(0, 229, 255, 0.22);
+
+  /* Raios */
+  --r1: 6px;
+  --r2: 12px;
+  --r3: 20px;
+  --rf: 9999px;
+
+  /* Tipografia */
+  --fd: 'Orbitron', monospace;
+  --fb: 'Sora', sans-serif;
+
+  /* Transição padrão */
+  --tr: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --sidebar-w: 280px;
+  --topbar-h:  52px;
+  --input-h:   76px;
+}
+
+/* ── Reset ──────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  width: 100%; height: 100%;
+  background: var(--bg-0);
+  color: var(--t1);
+  font-family: var(--fb);
+  font-size: 15px;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { cursor: pointer; font-family: var(--fb); }
+input, textarea { font-family: var(--fb); }
+
+/* Scrollbar customizada */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 3px; }
+* { scrollbar-width: thin; scrollbar-color: var(--bg-3) transparent; }
+
+/* ── Animações globais ──────────────────────── */
+@keyframes pulse  { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+@keyframes spin   { to{transform:rotate(360deg)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+@keyframes glow   { 0%,100%{box-shadow:0 0 8px var(--c-glow)} 50%{box-shadow:0 0 24px var(--c-glow)} }

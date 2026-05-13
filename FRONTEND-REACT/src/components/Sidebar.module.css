@@ -1,0 +1,170 @@
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--b1);
+  background: var(--bg-1);
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: var(--topbar-h);
+  border-bottom: 1px solid var(--b1);
+  flex-shrink: 0;
+}
+
+.brand { display: flex; align-items: center; gap: 8px; }
+
+.brandDot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 7px var(--c);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.brandName {
+  font-family: var(--fd);
+  font-size: 14px; font-weight: 900;
+  letter-spacing: .18em; color: var(--c);
+  text-shadow: 0 0 16px var(--c-glow);
+}
+
+.brandVer { font-size: 9px; color: var(--t3); letter-spacing: .08em; }
+
+.newBtn {
+  width: 32px; height: 32px;
+  background: transparent;
+  border: 1px solid var(--b1);
+  border-radius: var(--r1);
+  color: var(--t2);
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--tr);
+}
+.newBtn:hover {
+  color: var(--c); border-color: var(--b2);
+  background: var(--c-dim); box-shadow: 0 0 10px var(--c-dim);
+}
+
+/* ── Status bar ─────────────────────────────── */
+.statusBar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--b1);
+  flex-shrink: 0;
+}
+
+.dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.dotOnline   { background: var(--green);  box-shadow: 0 0 6px var(--green); }
+.dotOffline  { background: var(--red);    box-shadow: 0 0 6px var(--red); }
+.dotStarting { background: var(--amber);  animation: pulse 1.5s ease-in-out infinite; }
+.dotLoading  { background: var(--c);      animation: pulse 1s ease-in-out infinite; }
+
+.statusLabel { font-size: 11px; color: var(--t2); flex: 1; }
+
+.modelPill {
+  font-family: var(--fd);
+  font-size: 8px; letter-spacing: .06em;
+  color: var(--c); background: var(--c-dim);
+  border: 1px solid rgba(0,229,255,.16);
+  border-radius: var(--rf);
+  padding: 2px 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 96px;
+}
+
+/* ── Lista ──────────────────────────────────── */
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 0;
+}
+
+.empty {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 10px; height: 200px;
+  color: var(--t3); font-size: 13px;
+}
+
+.emptyBtn {
+  background: var(--c-dim); border: 1px solid var(--b2);
+  border-radius: var(--rf); color: var(--c);
+  font-size: 12px; padding: 7px 16px;
+  transition: all var(--tr);
+}
+.emptyBtn:hover { background: rgba(0,229,255,.18); }
+
+/* Item de conversa */
+.item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 16px; cursor: pointer;
+  transition: background var(--tr);
+  position: relative;
+}
+.item:hover { background: var(--bg-2); }
+.item:hover .delBtn { opacity: 1; }
+
+.itemActive { background: var(--bg-3) !important; }
+.itemActive::before {
+  content: '';
+  position: absolute; left: 0; top: 6px; bottom: 6px;
+  width: 3px; border-radius: 0 3px 3px 0;
+  background: var(--c);
+  box-shadow: 0 0 8px var(--c-glow);
+}
+
+.avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--c-dim); border: 1px solid var(--b2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--fd); font-size: 9px; color: var(--c);
+  letter-spacing: .06em;
+}
+
+.info { flex: 1; min-width: 0; }
+
+.itemTop { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; }
+
+.title {
+  font-size: 13px; font-weight: 500; color: var(--t1);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  flex: 1;
+}
+
+.time { font-size: 10px; color: var(--t3); flex-shrink: 0; }
+
+.preview {
+  font-size: 12px; color: var(--t2);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  margin-top: 2px;
+}
+
+.delBtn {
+  background: transparent; border: none;
+  color: var(--t3); opacity: 0; transition: opacity var(--tr), color var(--tr);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; width: 22px; height: 22px; border-radius: var(--r1);
+}
+.delBtn:hover { color: var(--red); opacity: 1 !important; }
+
+/* ── Rodapé ─────────────────────────────────── */
+.footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 16px;
+  border-top: 1px solid var(--b1);
+  font-size: 10px; color: var(--t3);
+  letter-spacing: .05em;
+  flex-shrink: 0;
+}
