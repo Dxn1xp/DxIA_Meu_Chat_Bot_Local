@@ -22,6 +22,8 @@ Timer, Controle de Volume, Controle de Brilho, Listar Processos, Status da IA, M
 Qualquer coisa a ser perguntada sem citar um comando > IA vai responder no chat.
 
 
+
+
 Requisitos:
 Python 3.13+ (Eu uso 3.14)
 Node.js
@@ -40,11 +42,31 @@ Dependências:
 - OpenCV
 - MediaPipe
 
+
+Instale a maioria usando esses comandos:
+
+pip install PyYAML==6.0.2
+pip install httpx==0.27.0
+pip install psutil==6.0.0
+pip install pytest==8.2.2
+pip install pytest-asyncio==0.23.8
+pip install pyttsx3==2.90
+pip install sounddevice==0.4.6
+pip install soundfile==0.12.1
+pip install numpy
+pip install edge-tts==6.1.12
+pip install pynput==1.7.7
+pip install pyautogui==0.9.54
+pip install pywin32==308
+pip install vosk
+
+--------------------------------------
+
 ### Frontend
 - React
 - Vite
 
----
+-------------------------------------
 
 # Instalação
 
