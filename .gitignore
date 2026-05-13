@@ -10,6 +10,7 @@ __pycache__/
 venv/
 vision_env/
 
+
 # Logs
 logs/
 *.log
@@ -26,3 +27,5 @@ node_modules/
 # Build
 dist/
 build/
+
+config.yaml
