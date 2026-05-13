@@ -1,0 +1,4 @@
+# Coloque aqui o modelo Vosk PT-BR descompactado.
+# Download: https://alphacephei.com/vosk/models
+# Arquivo:  vosk-model-small-pt-0.3.zip
+# Após descompactar, esta pasta deve conter: am/, conf/, graph/, ivector/, etc.

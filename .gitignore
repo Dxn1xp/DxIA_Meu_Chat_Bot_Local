@@ -1,10 +1,28 @@
+# Python
 __pycache__/
-*.py[cod]
-.venv/
-data/
-logs/
-models/
+*.pyc
+*.pyo
+*.pyd
 .pytest_cache/
-.coverage
-ui/electron/node_modules/
-config.local.yaml
+
+# Virtual envs
+.venv/
+venv/
+vision_env/
+
+# Logs
+logs/
+*.log
+
+# VSCode
+.vscode/
+
+# Env
+.env
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/
